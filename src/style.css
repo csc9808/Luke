@@ -635,11 +635,14 @@ button:focus {
     padding-left: 15px !important;
   }
 }
-.resume .resume-title {
-  font-size: 2em;
-  font-weight: 700;
-  padding-top: 30px;
-  padding-bottom: 30px;
+.resume-section {
+  position: relative !important;
+  padding-top: 110px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+  color: white !important;
+  flex: 1; /* Allow the resume section to grow and fill the space */
+  min-height: calc(100vh); /* Adjust based on footer height */
 }
 
 .resume .resume-item {
