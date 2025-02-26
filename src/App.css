@@ -2,10 +2,11 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  height: auto; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
