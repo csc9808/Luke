@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/../Assets/Seong Chan Cho_Resume.pdf";
+
 import Hankook from "../../Assets/hankook.svg";
 import WorldVision from "../../Assets/World Vision.png";
 import Softin from "../../Assets/Softin.svg";
 import ISU from "../../Assets/ISU.png";
-import { AiOutlineDownload } from "react-icons/ai";
-import { Document, Page, pdfjs } from "react-pdf";
+import { pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
@@ -53,6 +51,7 @@ function ResumeNew() {
           </div>
         </Row>
       </Container>
+
     </div>
   );
 }

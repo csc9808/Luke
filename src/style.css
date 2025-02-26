@@ -400,13 +400,34 @@ button:focus {
 
 /* --------- */
 /* Footer */
-/* --------- */
-.footer {
-  background-color: rgb(10, 4, 22);
-  bottom: 0 !important;
-  padding-top: 10px !important;
-  padding-bottom: 8px !important ;
+html, body {
+    height: 100%; /* Ensure the body takes the full height */
+    margin: 0; /* Remove default margin */
 }
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the root takes the full height */
+}
+
+.resume-section {
+  position: relative !important;
+  padding-top: 110px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+  color: white !important;
+  flex: 1; /* Allow the resume section to grow and fill the space */
+  min-height: calc(100vh); /* Adjust based on footer height */
+}
+
+.footer {
+    background-color: rgb(10, 4, 22);
+    padding-top: 10px !important;
+    padding-bottom: 8px !important;
+}
+
+
 .footer-copywright {
   text-align: center !important;
 }
@@ -762,4 +783,3 @@ button:focus {
 .resume-company-container {
 position: relative
 }
-
