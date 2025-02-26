@@ -17,24 +17,21 @@ function ProjectCards(props) {
             </Card.Text>
           </div>
           <br />
-          <div>
-            <Button variant="primary" href={props.ghLink} target="_blank">
+            <Button variant="primary" href={props.ghLink} target="_blank" style={{ marginLeft: "10px" }}>
               <BsGithub /> &nbsp;
               {props.isBlog ? "Blog" : "GitHub"}
             </Button>
             {"\n"}
             {"\n"}
-          </div>
-
-
+          <br />
         {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
-
         {!props.isBlog && props.demoLink && (
           <Button
             variant="primary"
             href={props.demoLink}
             target="_blank"
             style={{ marginLeft: "10px" }}
+            justifyContent = 'space-between'
           >
             <CgWebsite /> &nbsp;
             {"Demo"}
