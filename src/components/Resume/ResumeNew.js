@@ -4,6 +4,9 @@ import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import pdf from "../../Assets/../Assets/Seong Chan Cho_Resume.pdf";
 import Hankook from "../../Assets/hankook.svg";
+import WorldVision from "../../Assets/World Vision.png";
+import Softin from "../../Assets/Softin.svg";
+import ISU from "../../Assets/ISU.png";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -28,28 +31,26 @@ function ResumeNew() {
             Work Experience
           </h2>
           <br />
-          <div className="col-lg-3 col-md-3">
-            <li>
-            <a href="https://www.hankookandcompany.com/en.do"><img src={Hankook} /></a>
-
-            </li>
+          
+          <div className="resume-item-container" style={{ textAlign: "left" }}>
+            <img className="resume-company-logo" src={Hankook} />
+            <a href="https://www.hankookandcompany.com/en.do" target="_blank" className="resume-item">Hankook & Company ES America Corp</a>
           </div>
-          <b style={{ textAlign: "left", position: "sticky" }}>Hankook & Company ES America Corp</b>
-          <b style={{ textAlign: "left", position: "sticky" }}>World Vision</b>
-          <b style={{ textAlign: "left", position: "sticky" }}>SoftIn</b>
-          <b style={{ textAlign: "left", position: "sticky" }}>ISU System</b>
-        </Row>
-
-        <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button
-            variant="primary"
-            href={pdf}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
-          >
-            <AiOutlineDownload />
-            &nbsp;Download CV
-          </Button>
+          
+          <div className="resume-item-container" style={{ textAlign: "left" }}>
+            <img className="resume-company-logo" src={WorldVision} />
+            <a href="https://www.worldvision.org/" target="_blank" className="resume-item">World Vision</a>
+          </div>
+          
+          <div className="resume-item-container" style={{ textAlign: "left" }}>
+            <img className="resume-company-logo" src={Softin} />
+            <a href="https://softin.co.kr/" target="_blank" className="resume-item">SoftIn</a>
+          </div>
+          
+          <div className="resume-item-container" style={{ textAlign: "left" }}>
+            <img className="resume-company-logo" src={ISU} />
+            <a href="https://www.isusystem.com/eng/index.do" target="_blank" className="resume-item">ISU System</a>
+          </div>
         </Row>
       </Container>
     </div>

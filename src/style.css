@@ -645,7 +645,8 @@ button:focus {
 .resume .resume-item {
   padding: 0 0 10px 25px;
   margin-top: -2px;
-  border-left: 2px solid #8a49a8;
+  border-left: 30px solid transparent;
+  margin-bottom: 10px;
   position: relative;
 }
 
@@ -741,3 +742,24 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+.resume-item {
+    color: white; /* Default color */
+    font-size:x-large
+}
+
+.resume-item:hover {
+    color: rgb(236, 138, 236); /* Color on hover */
+}
+
+.resume-company-logo {
+  width: 100px;
+  height: auto;
+  position: relative;
+  left: 5px;
+  object-fit:scale-down
+}
+.resume-company-container {
+position: relative
+}
+
