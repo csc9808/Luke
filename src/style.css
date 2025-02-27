@@ -22,43 +22,44 @@ button:focus {
   box-shadow: none !important;
 }
 
-/* --------- */
-/*  Preloader */
-/* --------- */
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999999;
-  background-color: #0c0513;
-  background-image: url(./Assets/pre.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+/* Resume Section */
+.resume-section {
+  position: relative !important;
+  padding-top: 5%; /* Use percentage for responsive padding */
+  padding-bottom: 5%; /* Use percentage for responsive padding */
+  background-image: var(--section-background-color) !important;
+  color: white !important;
 }
 
-#preloader-none {
-  opacity: 0;
+.resume {
+  padding-top: 2%; /* Use percentage for responsive padding */
+  padding-bottom: 2%; /* Use percentage for responsive padding */
+  justify-content: center;
+  display: flex; /* Use flexbox for better alignment */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
 }
 
-#no-scroll {
-  overflow: hidden;
-  height: 100vh;
+.resume-item-container {
+  display: flex; /* Use flexbox for side-by-side layout */
+  justify-content: space-between; /* Space items evenly */
+  align-items: flex-start; /* Align items to the top */
+
+  color: white; /* Default color */
+  margin: 10px 0; /* Add margin for spacing between items */
 }
 
-/* --------- */
-/*Scrollbar   */
-/* --------- */
-
-::-webkit-scrollbar {
-  width: 7px;
+.resume-work-description {
+  margin-left: 20px; /* Add space between title and description */
+  flex: 1; /* Allow description to take available space */
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #2d1950;
+.resume-company-logo {
+  max-width: 100%; /* Ensure responsiveness */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: scale-down;
 }
+
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -155,8 +156,8 @@ button:focus {
 }
 
 .logo {
-  height: 1.4em !important;
-  width: 2.5em !important;
+  height: 3.1em !important;
+  width: 3em !important;
 }
 
 .navbar-nav .nav-link {
@@ -664,14 +665,16 @@ button:focus {
 }
 
 .resume .resume-item ul {
-  padding-left: 20px;
-  text-align: justify;
+  padding-left: 0; /* Remove left padding for alignment */
+  text-align: left; /* Align text to the left */
 }
 
+
 .resume .resume-item ul li {
-  padding-bottom: 10px;
-  list-style: none;
+  padding-bottom: 0; /* Remove bottom padding for alignment */
+  list-style: disc; /* Use disc for bullet points */
 }
+
 
 .resume .resume-item:last-child {
   padding-bottom: 0;
@@ -748,7 +751,93 @@ button:focus {
 
 .resume-item {
     color: white; /* Default color */
-    font-size:x-large
+    font: size 3em;
+    position:absolute;
+/* Resume Section */
+.resume-section {
+  position: relative !important;
+  padding-top: 110px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+  color: white !important;
+  flex: 1; /* Allow the resume section to grow and fill the space */
+  min-height: calc(100vh - 70px); /* Adjust based on footer height */
+}
+
+.resume {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: center;
+  display: flex; /* Use flexbox for better alignment */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.resume-left {
+  padding-right: 80px !important;
+}
+
+.resume-right {
+  padding-left: 80px !important;
+}
+
+@media (max-width: 767px) {
+  .resume-left {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+
+  .resume-right {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+}
+
+.resume .resume-item {
+  padding: 0 0 10px 25px;
+  margin-top: -2px;
+  border-left: 30px solid transparent;
+  margin-bottom: 10px;
+  position: relative;
+  display: flex; /* Use flexbox for better alignment */
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the top */
+}
+
+.resume .resume-item .resume-title {
+  line-height: 18px;
+  font-size: 0.9em;
+  background: #5234795d;
+  padding: 8px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 0; /* Remove left padding for alignment */
+  text-align: left; /* Align text to the left */
+  list-style: none; /* Remove default list styling */
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 0; /* Remove bottom padding for alignment */
+  margin-bottom: 10px; /* Add margin for spacing between items */
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;.resume-item {
+    color: white; /* Default color */
+    font-size: 1em; /* Set font size */
+    position: relative; /* Set position to relative */
+    transition: color 0.3s ease-out 0s; /* Add transition effect */
 }
 
 .resume-item:hover {
@@ -756,13 +845,135 @@ button:focus {
 }
 
 .resume-company-logo {
-  width: 100px;
+  width: 5em;
+  height: auto;
+  position: relative;
+  left: 5px;
+  object-fit: scale-down;
+  transition: transform 0.3s ease-out 0s; /* Add transition effect */
+}
+
+.resume-company-logo:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+.resume-company-container {
+  position: relative;
+  column-count: 2;
+}
+
+.resume-work-title{
+  font-size: 1em;
+  color: #e6caf3;
+  padding-left: 8.5em;
+}
+
+.resume-work-date{
+  font-size: 0.8em;
+  padding-left: 10.6em;
+}
+
+.resume-work-description{
+  font-size: 1em;
+}
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #8a49a8;
+}
+
+.resume-company-logo {
+  width: 5em;
+  height: auto;
+  position: relative;
+  left: 5px;
+  object-fit: scale-down;
+}
+
+.resume-company-container {
+  position: relative;
+  column-count: 2;
+}
+
+.resume-work-title {
+  font-size: 1em;
+  color: #e6caf3;
+  padding-left: 8.5em;
+}
+
+.resume-work-date {
+  font-size: 0.8em;
+  padding-left: 10.6em;
+}
+
+.resume-work-description {
+  font-size: 1em;
+}.resume-item {
+    color: white; /* Default color */
+    font-size: 1em; /* Set font size */
+    position: relative; /* Set position to relative */
+}
+
+.resume-item:hover {
+    color: rgb(236, 138, 236); /* Color on hover */
+}
+
+.resume-company-logo {
+  width: 5em;
+  height: auto;
+  position: relative;
+  left: 5px;
+  object-fit: scale-down;
+}
+
+.resume-company-container {
+  position: relative;
+  column-count: 2;
+}
+
+.resume-work-title{
+  font-size: 1em;
+  color: #e6caf3;
+  padding-left: 8.5em;
+}
+
+.resume-work-date{
+  font-size: 0.8em;
+  padding-left: 10.6em;
+}
+
+.resume-work-description{
+  font-size: 1em;
+}}
+
+.resume-item:hover {
+    color: rgb(236, 138, 236); /* Color on hover */
+}
+
+.resume-company-logo {
+  width: 5em;
   height: auto;
   position: relative;
   left: 5px;
   object-fit:scale-down
 }
 .resume-company-container {
-position: relative
+position: relative;
+column-count: 2;
 }
 
+.resume-work-title{
+  font-size: 1em;
+  color: #e6caf3;
+  padding-left: 8.5em;
+}
+
+.resume-work-date{
+  font-size: 0.8em;
+  padding-left: 10.6em;
+}
+
+.resume-work-description{
+  font-size: 1em;
+}

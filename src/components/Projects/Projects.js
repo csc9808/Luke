@@ -6,6 +6,7 @@ import Disaster from "../../Assets/Projects/disaster.png";
 import Coffee from "../../Assets/Projects/coffee.jpg";
 import Angrynorman from "../../Assets/Projects/angrynorman.png";
 import Solution from "../../Assets/Projects/Solution.png";
+import Globe from "../../Assets/Projects/globe.png";
 
 
 function Projects() {
@@ -32,6 +33,16 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={Angrynorman}
+              isBlog={false}
+              title="Mini Game:Run from Professor"
+              description="Angular web-based mini game created in light of Prof.Norman"
+              ghLink="https://github.com/RunFromNorman/AngryNorman?tab=readme-ov-file"
+              demoLink="https://angrynorman-1bd08.web.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={Disaster} // Corrected variable name to match import
               isBlog={false}
               title="Disaster AI"
@@ -49,18 +60,16 @@ function Projects() {
               ghLink="https://github.com/calvin-cs262-fall2022-teamG/Client"
             />
           </Col>
-
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={Angrynorman}
+              imgPath={Globe}
               isBlog={false}
-              title="Mini Game:Run from Professor"
-              description="Angular web-based mini game created in light of Prof.Norman"
-              ghLink="https://github.com/RunFromNorman/AngryNorman?tab=readme-ov-file"
-              demoLink="https://angrynorman-1bd08.web.app/"
+              title="My Album: Globe"
+              description="Place Holder for Currently Developing Project"
+              ghLink=""
+              demoLink=""
             />
           </Col>
-
         </Row>
       </Container>
     </Container>
