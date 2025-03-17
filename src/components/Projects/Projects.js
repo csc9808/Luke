@@ -21,6 +21,16 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Globe}
+              isBlog={false}
+              title="My Album: Globe"
+              description="My Personal Album Website built on a globe theme, where I can upload my photos taken around the world."
+              ghLink="https://github.com/csc9808/globe-album"
+              demoLink="https://globe-album.vercel.app"
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={Solution} // Corrected variable name to match import
@@ -58,16 +68,6 @@ function Projects() {
               title="Coffee App"
               description="App created using react-native to simulate remote ordering app for coffee shop"
               ghLink="https://github.com/calvin-cs262-fall2022-teamG/Client"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={Globe}
-              isBlog={false}
-              title="My Album: Globe"
-              description="Place Holder for Currently Developing Project"
-              ghLink=""
-              demoLink=""
             />
           </Col>
         </Row>
