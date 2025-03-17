@@ -46,7 +46,7 @@ function Projects() {
               imgPath={Angrynorman}
               isBlog={false}
               title="Mini Game:Run from Professor"
-              description="Angular web-based mini game created in light of Prof.Norman"
+              description="Angular web-based mini game created in light of Prof.Norman. The game is a simple run game like the chrome dino game where the player must avoid obstacles to run from professor."
               ghLink="https://github.com/RunFromNorman/AngryNorman?tab=readme-ov-file"
               demoLink="https://angrynorman-1bd08.web.app/"
             />

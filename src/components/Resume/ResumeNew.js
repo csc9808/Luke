@@ -31,8 +31,8 @@ function ResumeNew() {
           {companies.map((company, index) => (
             <div key={index} className="resume-item-container" style={{ display: 'flex', width: '100%' }}>
               <div style={{ flex: '3', textAlign: "left", paddingTop: '0', alignItems: 'flex-start' }}>
-                <img className="resume-company-logo" src={company.logo} />
-                <a href={company.url} target="_blank" className="resume-item">{company.name}</a>
+                <img className="resume-company-logo" src={company.logo} alt={`${company.name} logo`} />
+                <a href={company.url} target="_blank" rel="noreferrer" className="resume-item">{company.name}</a>
                 <br />
                 <b className="resume-work-title">{company.title}</b>
                 <br />
