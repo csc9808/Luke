@@ -7,6 +7,7 @@ import Coffee from "../../Assets/Projects/coffee.jpg";
 import Angrynorman from "../../Assets/Projects/angrynorman.png";
 import Solution from "../../Assets/Projects/Solution.png";
 import Globe from "../../Assets/Projects/globe.png";
+import Pokemon from "../../Assets/Projects/pokemon.png";
 
 
 function Projects() {
@@ -26,9 +27,19 @@ function Projects() {
               imgPath={Globe}
               isBlog={false}
               title="My Album: Globe"
-              description="My Personal Album Website built on a globe theme, where I can upload my photos taken around the world."
+              description="My Personal Album Website built on a globe theme, where I can upload my photos taken around the world. This Project Utilizes Three.js for 3D rendering and animation handling."
               ghLink="https://github.com/csc9808/globe-album"
               demoLink="https://globe-album.vercel.app"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Pokemon} // Corrected variable name to match import
+              isBlog={false}
+              title="Pokemon Website" 
+              description="This website is a Pokemon Trading Card Game Promotional website. This Project was built after getting a recent interest in Pokemon Mobile Trading Card Game. This website is a simple informative website about the game. Mainly focused on GSAP and front-end features of Javascript."
+              ghLink="https://github.com/csc9808/Pokemon"
+              demoLink = "https://pokemon-nine-ruby.vercel.app/"
             />
           </Col>
           <Col md={4} className="project-card">

@@ -7,7 +7,6 @@ import {
   SiLinux,
   SiVercel,
   SiMacos,
-  SiUipath,
   SiCisco,
   SiDiscord,
 } from "react-icons/si";
